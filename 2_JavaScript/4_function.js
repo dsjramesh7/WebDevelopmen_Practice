@@ -30,3 +30,15 @@ const canVote = (age) => {
 
 const canVote1 = canVote(21);
 console.log(canVote1);
+
+//assignment 3:
+// sum from 1 to nth number
+function sumToNth(n) {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    sum = sum + i;
+  }
+  return sum;
+}
+console.log(sumToNth(69));
+console.log(sumToNth(12));
