@@ -8,11 +8,18 @@ const taskListEl = document.querySelector("#taskList");
 let counterId = 0;
 const addTodo = () => {
   const value = inputEl.value;
-  const task = document.createElement("div");
-  task.setAttribute("id", counterId);
-  task.innerHTML = `<p>${value}</p> <button onclick="deleteTodo(${counterId})">delete</button>`;
+  const taskdiv = document.createElement("div");
+  taskdiv.setAttribute("id", counterId);
+  // taskdiv.innerHTML = `<p>${value}</p> <button onclick="deleteTodo(${counterId})">delete</button>`;
+  const spanEl = document.createElement("span");
+  const btnEl = document.createElement("button");
+  spanEl.innerHTML = value;
+  btnEl.innerHTML = "DeleteTask";
+
+  taskdiv.appendChild(spanEl);
+  taskdiv.appendChild(btnEl);
+  taskListEl.appendChild(taskdiv);
   counterId++;
-  taskListEl.appendChild(task);
   inputEl.value = "";
 };
 
